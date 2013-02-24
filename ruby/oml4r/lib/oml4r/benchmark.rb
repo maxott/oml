@@ -55,8 +55,8 @@ module OML4R
       end
 
       if @monitor_interval > 0
-	Thread.new do
-	  while @running 
+        Thread.new do
+          while @running 
             sleep @monitor_interval
             _report()
           end
@@ -213,7 +213,7 @@ if __FILE__ == $0
   OML4R::Benchmark.bm('test', periodic: 0.1) do |bm|
     20.times do |i|
       10.times do
-	"a" * 1_000_000
+        "a" * 1_000_000
         bm.step
       end
 
